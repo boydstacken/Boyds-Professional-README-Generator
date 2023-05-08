@@ -35,11 +35,22 @@ inquirer
         message: 'Who were contributors for the project?',
         name: 'contributors',
     },
+    {
+        type: 'checkbox',
+        message: 'Choose your README license',
+        name: 'license',
+    },
+    {
+        type: 'input',
+        message: 'Enter Your Github Username',
+        choices: [Licenes],
+        name: 'contributors',
+    },
   ])
   .then((response) =>{
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
-  fs.writeFile(filename,JSON.stringify(response), err=> {
+  fs.writeFile(README.md,JSON.stringify(response), err=> {
       err?console.log(err):console.log("sucess")
   })
 })
