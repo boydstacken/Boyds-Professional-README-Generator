@@ -1,6 +1,33 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer')
 const fs = require ('fs')
+const axios = require('axios')
+//const README = require('README.me')
+
+//License choice that feeds into the array in the prompt,this if/else statement will return the related badge the user selects.
+const choices = ["Apache 2.0", "BSD 3-Clause", "BSD 2-Clause" ]
+
+if (choices == "Apache 2.0") {
+    license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+}else{
+if (choices == "BSD 3-Clause") {
+    license = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+}else{
+if (choices == "BSD 2-Clause") {
+    license = "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)"
+    ;
+ }
+
+ const username = 'your-github-username'
+
+ axios.get(`https://api.github.com/users/${username}`)
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+    
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -38,19 +65,24 @@ inquirer
     {
         type: 'checkbox',
         message: 'Choose your README license',
+        choices: ['Apache 2.0', 'BSD 3-Clause', 'BSD 2-Clause'],
         name: 'license',
     },
     {
         type: 'input',
         message: 'Enter Your Github Username',
-        choices: [Licenes],
-        name: 'contributors',
+        name: 'github username',
+    },
+    {
+        type: 'input',
+        message: 'Please enter your email',
+        name: 'email',
     },
   ])
   .then((response) =>{
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
   fs.writeFile(README.md,JSON.stringify(response), err=> {
-      err?console.log(err):console.log("sucess")
+      err?console.log(err):console.log("success")
   })
-})
+  })}}
