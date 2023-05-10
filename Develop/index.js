@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer')
 const fs = require ('fs')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 //License choice that feeds into the array in the prompt,this if/else statement will return the related badge the user selects.
 const choices = ["Apache 2.0", "BSD 3-Clause", "BSD 2-Clause" ]
@@ -39,7 +40,7 @@ inquirer
     {
         type: 'input',
         message: 'What are the installation instructions?',
-        name: 'installation instructions',
+        name: 'installation',
     },
     {
         type: 'input',
@@ -49,7 +50,12 @@ inquirer
     {
         type: 'input',
         message: 'Who were contributors for the project?',
-        name: 'contributors',
+        name: 'contributing',
+    },
+    {
+        type: 'input',
+        message: 'Please describe tests ran for this project',
+        name: 'tests',
     },
     {
         type: 'checkbox',
@@ -60,7 +66,7 @@ inquirer
     {
         type: 'input',
         message: 'Enter Your Github Username',
-        name: 'github username',
+        name: 'username',
     },
     {
         type: 'input',
@@ -71,7 +77,7 @@ inquirer
   .then((response) =>{
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
-  fs.writeFile("README.md",JSON.stringify(response), err=> {
+  fs.writeFile("README.md",generateMarkdown(response), err=> {
       err?console.log(err):console.log("success")
   })
   })}}
