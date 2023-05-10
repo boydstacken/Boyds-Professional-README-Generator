@@ -1,0 +1,1 @@
+{"name":"Boyd Stacken","title":"Cool Readme","description":"iojisjfdsfjsdfjsdfjiosdfjidsjf","installation instructions":"Install like a bodd","usage":"to create a readme with node js like a boss","contributors":"Boyd","license":[],"github username":"boydstacken","email":"boydstacken@icloud.com"}

@@ -1,8 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer')
 const fs = require ('fs')
-const axios = require('axios')
-//const README = require('README.me')
 
 //License choice that feeds into the array in the prompt,this if/else statement will return the related badge the user selects.
 const choices = ["Apache 2.0", "BSD 3-Clause", "BSD 2-Clause" ]
@@ -19,15 +17,6 @@ if (choices == "BSD 2-Clause") {
  }
 
  const username = 'your-github-username'
-
- axios.get(`https://api.github.com/users/${username}`)
-    .then(function (response) {
-        console.log(response.data);
-    })
-    .catch(function (error) {
-        console.log(error)
-    })
-    
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -82,7 +71,7 @@ inquirer
   .then((response) =>{
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
-  fs.writeFile(README.md,JSON.stringify(response), err=> {
+  fs.writeFile("README.md",JSON.stringify(response), err=> {
       err?console.log(err):console.log("success")
   })
   })}}
