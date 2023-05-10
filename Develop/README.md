@@ -1,7 +1,7 @@
-# sdf
-  # sdfsdf
+# Awesome README
+  # Boyd Stacken
 
-  dsfsdf
+  Best readme ever
   
   ## Table of Contents
 
@@ -17,20 +17,20 @@
   To install the project, run:
   
   ```
-  sdf
+  follow the instructions
   ```
   
   ## Usage
   
-  sdf
+  to create a cool readme using Node js
   
   ## Contributing
   
-  sdf
+  Myself
 
   ## Tests
 
-  sdf
+  Many different tests throughout
   
   ## License
   
@@ -38,5 +38,5 @@
 
   ## Questions
 
-  If you have any questions with this project, please reach out to me at sdf. Additional work can be found here: [sdfsd](https://github.com/sdfsd). 
+  If you have any questions with this project, please reach out to me at boydstacken@icloud.com. Additional work can be found here: [boydstacken](https://github.com/boydstacken). 
 
