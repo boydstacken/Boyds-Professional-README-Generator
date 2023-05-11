@@ -121,3 +121,5 @@ You are required to submit the following for review:
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+Link to tutorial video: file:///Users/boyd/Downloads/Untitled_%20May%2010,%202023%2011_22%20PM.webm 

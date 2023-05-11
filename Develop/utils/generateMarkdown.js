@@ -3,17 +3,18 @@
 const choices = ["Apache 2.0", "BSD 3-Clause", "BSD 2-Clause" ]
 
 function renderLicenseBadge(choices) {
-
+let badge = ''
 if (choices == "Apache 2.0") {
-    return `<img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg) alt="Apache license/>`
-  }else
-if (choices == "BSD 3-Clause") {
-    return `<img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg) alt="BSD 3-Clause/>`
-    }else
-if (choices == "BSD 2-Clause") {
-    return `<img src ="https://img.shields.io/badge/License-BSD%202--Clause-orange.svg) alt="BSD 2-Clause/>`
-  }else
-    ;
+    badge= `<img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg) alt="Apache license/>`
+}
+else if (choices == "BSD 3-Clause") {
+    badge =`<img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg) alt="BSD 3-Clause/>`
+}
+else if (choices == "BSD 2-Clause") {
+    badge =`<img src ="https://img.shields.io/badge/License-BSD%202--Clause-orange.svg) alt="BSD 2-Clause/>`
+}
+console.log(badge)
+return badge
 }
 
 // TODO: Create a function that returns the license link
@@ -53,7 +54,10 @@ if (choices == "BSD 2-Clause") {
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# 
+  ${renderLicenseBadge(data.license)} 
+
+  ${data.title}
   # ${data.name}
 
   ${data.description}

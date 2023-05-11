@@ -58,7 +58,7 @@ inquirer
         name: 'tests',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Choose your README license',
         choices: ['Apache 2.0', 'BSD 3-Clause', 'BSD 2-Clause'],
         name: 'license',
@@ -77,6 +77,7 @@ inquirer
   .then((response) =>{
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
+  console.log(response)
   fs.writeFile("README.md",generateMarkdown(response), err=> {
       err?console.log(err):console.log("success")
   })

@@ -1,7 +1,10 @@
-# eeee
+# 
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg) alt="Apache license/> 
+
+  Professional README Generator Example
   # Boyd Stacken
 
-  eee
+  How to create a professional readme
   
   ## Table of Contents
 
@@ -17,20 +20,20 @@
   To install the project, run:
   
   ```
-  ee
+  Run npm install, then node index.js and follow the prompts
   ```
   
   ## Usage
   
-  ee
+  this application teaches you how to run node js with a professional readme generator
   
   ## Contributing
   
-  ee
+  Boyd Stacken
 
   ## Tests
 
-  ee
+  n/a
   
   ## License
   
@@ -39,4 +42,10 @@
   ## Questions
 
   If you have any questions with this project, please reach out to me at boydstacken@icloud.com. Additional work can be found here: [boydstacken](https://github.com/boydstacken). 
+
+  ## Video Tutorial
+
+  Tutorial link: file:///Users/boyd/Downloads/Untitled_%20May%2010,%202023%2011_22%20PM.webm
+  
+
 
