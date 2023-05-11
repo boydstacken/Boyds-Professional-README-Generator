@@ -1,7 +1,7 @@
-# Awesome README
+# eeee
   # Boyd Stacken
 
-  Best readme ever
+  eee
   
   ## Table of Contents
 
@@ -17,20 +17,20 @@
   To install the project, run:
   
   ```
-  follow the instructions
+  ee
   ```
   
   ## Usage
   
-  to create a cool readme using Node js
+  ee
   
   ## Contributing
   
-  Myself
+  ee
 
   ## Tests
 
-  Many different tests throughout
+  ee
   
   ## License
   
