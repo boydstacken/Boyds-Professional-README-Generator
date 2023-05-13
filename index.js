@@ -78,7 +78,7 @@ inquirer
   const filename = `${response.name.toLowerCase().split(' ').join('')}.json`;
   // TODO: Create a function to write README file
   console.log(response)
-  fs.writeFile("README.md",generateMarkdown(response), err=> {
-      err?console.log(err):console.log("success")
+  fs.writeFile("./example/README.md",generateMarkdown(response), err=> {
+    err?console.log(err):console.log("success")
   })
   })}}
